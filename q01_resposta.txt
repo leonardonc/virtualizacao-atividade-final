@@ -1,0 +1,3 @@
+Q01 - De acordo com o kubernetes.io, "Afinidade de nó é uma propriedade dos Pods que os associa a um conjunto de nós (seja como uma preferência ou uma exigência). Taints são o oposto -- eles permitem que um nó repudie um conjunto de pods". Portanto, a razão pelo qual o pod não é agendado inicialmente no nó master, mas sim nos nos workers, é  uma marcação taint que impede que o control-plane seja usado.
+
+    Ainda de acordo com kubernetes.io, "Taints e tolerâncias trabalham juntos para garantir que pods não sejam alocados em nós inapropriados. Um ou mais taints são aplicados em um nó; isso define que o nó não deve aceitar nenhum pod que não tolera essas taints". Portando foi adicionado uma tolerations ao pod.
